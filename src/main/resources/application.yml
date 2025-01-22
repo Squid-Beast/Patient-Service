@@ -18,3 +18,12 @@ server:
   port: 8080
 logging:
   config: classpath:log4j2.xml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: [ "prometheus" ]
+  metrics:
+    export:
+      prometheus:
+        enabled: true
